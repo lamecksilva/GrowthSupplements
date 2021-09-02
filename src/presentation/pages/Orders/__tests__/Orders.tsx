@@ -1,13 +1,13 @@
 import 'react-native';
 import React from 'react';
-import { HomePage } from '../Home';
+import { OrderPage } from '../Orders';
 
 import { render } from '@testing-library/react-native';
 
 describe('Home Page', () => {
-  const { getByText } = render(<HomePage />);
+  const { getByText } = render(<OrderPage />);
 
   it('Render text correctly', () => {
-    expect(getByText('Home Page')).toBeDefined();
+    expect(getByText('Order Page')).toBeDefined();
   });
 });
