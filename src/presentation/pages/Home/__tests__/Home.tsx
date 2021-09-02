@@ -5,9 +5,9 @@ import { HomePage } from '../Home';
 import { render } from '@testing-library/react-native';
 
 describe('Home Page', () => {
-  const { getByText } = render(<HomePage />);
+  const { queryByText } = render(<HomePage />);
 
   it('Render text correctly', () => {
-    expect(getByText('Home Page')).toBeDefined();
+    expect(queryByText('Home Page')).toBeDefined();
   });
 });

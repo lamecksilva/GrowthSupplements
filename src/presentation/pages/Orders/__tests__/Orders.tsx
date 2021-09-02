@@ -5,9 +5,9 @@ import { OrderPage } from '../Orders';
 import { render } from '@testing-library/react-native';
 
 describe('Home Page', () => {
-  const { getByText } = render(<OrderPage />);
+  const { queryByText } = render(<OrderPage />);
 
   it('Render text correctly', () => {
-    expect(getByText('Order Page')).toBeDefined();
+    expect(queryByText('Order Page')).toBeDefined();
   });
 });
