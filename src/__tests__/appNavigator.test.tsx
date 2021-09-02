@@ -3,12 +3,19 @@ import React from 'react';
 import { render } from '@testing-library/react-native';
 
 import { AppNavigator } from '../presentation/AppNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
 describe('App Navigator', () => {
   it('Should render HomePage first', async () => {
-    const { findByText } = render(<AppNavigator />);
+    const component = (
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
+    );
 
-    const homeText = await findByText('Home');
+    const { findByText } = render(component);
+
+    const homeText = await findByText(/Home/i);
 
     expect(homeText).toBeTruthy();
   });

@@ -2,10 +2,11 @@ import React from 'react';
 import { StatusBar, useColorScheme } from 'react-native';
 
 import { Provider } from 'react-redux';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
 
 import { store } from './src/domain/store';
 import { AppNavigator } from './src/presentation/AppNavigator';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -15,7 +16,9 @@ const App = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
       <SafeAreaProvider>
-        <AppNavigator />
+        <NavigationContainer>
+          <AppNavigator />
+        </NavigationContainer>
       </SafeAreaProvider>
     </Provider>
   );
