@@ -6,12 +6,18 @@ import { HomePage } from './pages/Home';
 
 const Stack = createNativeStackNavigator();
 
+function StackNavigator(): JSX.Element {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomePage} />
+    </Stack.Navigator>
+  );
+}
+
 export function AppNavigator(): JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomePage} />
-      </Stack.Navigator>
+      <StackNavigator />
     </NavigationContainer>
   );
 }
