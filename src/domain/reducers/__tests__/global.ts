@@ -5,16 +5,16 @@ describe('Global Reducer', () => {
     appLoading: false,
   };
 
-  it('should handle initial state ', () => {
-    expect(globalReducer(undefined, { type: 'unknown' })).toEqual({
-      appLoading: false,
-    });
+  it('should handle initial state', () => {
+    const actual = globalReducer(undefined, { type: 'unknown' });
+
+    expect(actual.appLoading).toEqual(false);
   });
 
   it('should toggle loading state to true', () => {
-    expect(globalReducer(initialState, toggleLoading())).toEqual({
-      appLoading: true,
-    });
+    const actual = globalReducer(initialState, toggleLoading());
+
+    expect(actual.appLoading).toEqual(true);
   });
 
   it('should toggle loading state to false', () => {
