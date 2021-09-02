@@ -1,4 +1,4 @@
-import globalReducer, { IGlobalState, toggleLoading } from './global';
+import globalReducer, { IGlobalState, toggleLoading } from '../global';
 
 describe('Global Reducer', () => {
   const initialState: IGlobalState = {
