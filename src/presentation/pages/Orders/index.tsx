@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export function OrderPage(): JSX.Element {
+export function OrdersPage(): JSX.Element {
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <Text>Order Page</Text>
+      <Text>Orders Page</Text>
     </SafeAreaView>
   );
 }
