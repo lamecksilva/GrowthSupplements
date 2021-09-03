@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { store } from './src/domain/store';
-import { AppNavigator } from './src/presentation/AppNavigator';
+import { AppNavigator } from './src/infra/navigation/AppNavigator';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';

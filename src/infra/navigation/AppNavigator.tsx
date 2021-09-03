@@ -2,11 +2,12 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { HomePage } from './pages/Home';
-import { OrderPage } from './pages/Orders';
-import { ProfilePage } from './pages/Profile';
+import { HomePage } from '../../presentation/pages/Home';
+import { OrderPage } from '../../presentation/pages/Orders';
+import { ProfilePage } from '../../presentation/pages/Profile';
+import { RootStackParamList } from './RootStackParams';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function StackNavigator(): JSX.Element {
   return (

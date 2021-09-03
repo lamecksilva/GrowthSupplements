@@ -4,8 +4,14 @@ import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../../infra/navigation/RootStackParams';
+
+type HomeScreenProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
+
 export function HomePage(): JSX.Element {
-  const navigation = useNavigation();
+  const navigation = useNavigation<HomeScreenProp>();
+  //TODO: Type Navigation
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
