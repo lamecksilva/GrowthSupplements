@@ -1,3 +1,13 @@
+root = true
+
+[*]
+charset = utf-8
+indent_size = 2
+insert_final_newline = true
+
+[*.{json,yml,*rc}]
+indent_size = 2
+
 # Windows files
 [*.bat]
 end_of_line = crlf
