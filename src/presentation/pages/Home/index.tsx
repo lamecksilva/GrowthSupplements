@@ -1,23 +1,25 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Button } from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../../infra/navigation/RootStackParams';
+import {
+  MainNavigationProp,
+  MainRoutes,
+} from '../../../infra/navigation/RootStackParams';
 
-type HomeScreenProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
+type HomePageScreenProps = {
+  navigation: MainNavigationProp<MainRoutes.Home>;
+};
 
-export function HomePage(): JSX.Element {
-  const navigation = useNavigation<HomeScreenProp>();
-  //TODO: Type Navigation
-
+export function HomePage({ navigation }: HomePageScreenProps): JSX.Element {
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <Text>Home Page</Text>
 
-      <Button onPress={() => navigation.navigate('Order')}>Order</Button>
+      <Button onPress={() => navigation.navigate(MainRoutes.Orders)}>
+        Orders
+      </Button>
     </SafeAreaView>
   );
 }
