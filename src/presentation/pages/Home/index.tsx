@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Button } from 'react-native-paper';
@@ -8,11 +9,9 @@ import {
   MainRoutes,
 } from '../../../infra/navigation/RootStackParams';
 
-type HomePageScreenProps = {
-  navigation: MainNavigationProp<MainRoutes.Home>;
-};
+export function HomePage(): JSX.Element {
+  const navigation = useNavigation<MainNavigationProp<MainRoutes.Home>>();
 
-export function HomePage({ navigation }: HomePageScreenProps): JSX.Element {
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <Text>Home Page</Text>
