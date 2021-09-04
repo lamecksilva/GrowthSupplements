@@ -1,5 +1,3 @@
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-
 export enum MainRoutes {
   Splash = 'Splash',
   Loading = 'Loading',
@@ -18,4 +16,7 @@ export type MainStackParamList = {
 
 export type MainNavigationProp<
   RouteName extends keyof MainStackParamList = MainRoutes,
-> = NativeStackNavigationProp<MainStackParamList, RouteName>;
+> = import('@react-navigation/native-stack').NativeStackNavigationProp<
+  MainStackParamList,
+  RouteName
+>;
