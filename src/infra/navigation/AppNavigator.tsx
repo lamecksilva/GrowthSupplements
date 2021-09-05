@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { MainRoutes } from './RootStackParams';
 
-import { HomePage } from '../../presentation/pages/Home';
-import { OrdersPage } from '../../presentation/pages/Orders';
-import { ProfilePage } from '../../presentation/pages/Profile';
+import { HomePage } from '../../presentation/screens/Home';
+import { OrdersPage } from '../../presentation/screens/Orders';
+import { ProfilePage } from '../../presentation/screens/Profile';
 
 const Stack =
   createNativeStackNavigator<import('./RootStackParams').MainStackParamList>();
