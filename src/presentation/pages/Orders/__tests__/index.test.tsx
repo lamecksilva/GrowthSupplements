@@ -5,9 +5,11 @@ import { OrdersPage } from '../';
 import { render } from '@testing-library/react-native';
 
 describe('Orders Page', () => {
-  const { queryByText } = render(<OrdersPage />);
+  it('should render correctly', async () => {
+    const { findByText } = render(<OrdersPage />);
 
-  it('Render text correctly', () => {
-    expect(queryByText('Orders Page')).toBeDefined();
+    const screen = await findByText(/Orders Page/);
+
+    expect(screen).toBeTruthy();
   });
 });

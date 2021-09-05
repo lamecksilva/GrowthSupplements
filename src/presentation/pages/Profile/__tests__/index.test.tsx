@@ -5,9 +5,11 @@ import { ProfilePage } from '../';
 import { render } from '@testing-library/react-native';
 
 describe('Profile Page', () => {
-  const { queryByText } = render(<ProfilePage />);
+  it('should render correctly', async () => {
+    const { findByText } = render(<ProfilePage />);
 
-  it('Render text correctly', () => {
-    expect(queryByText('Profile Page')).toBeDefined();
+    const screen = await findByText(/Profile Page/i);
+
+    expect(screen).toBeTruthy();
   });
 });
