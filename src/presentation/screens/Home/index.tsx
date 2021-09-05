@@ -9,12 +9,12 @@ import {
   MainNavigationProp,
 } from '@infra/navigation/RootStackParams';
 
-export function HomePage(): JSX.Element {
+export function HomeScreen(): JSX.Element {
   const navigation = useNavigation<MainNavigationProp<MainRoutes.Home>>();
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <Text>Home Page</Text>
+      <Text>Home Screen</Text>
 
       <Button
         onPress={() => navigation.navigate(MainRoutes.Orders)}

@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { MainRoutes } from './RootStackParams';
 
-import { HomePage } from '../../presentation/screens/Home';
-import { OrdersPage } from '../../presentation/screens/Orders';
-import { ProfilePage } from '../../presentation/screens/Profile';
+import { HomeScreen } from '../../presentation/screens/Home';
+import { OrdersScreen } from '../../presentation/screens/Orders';
+import { ProfileScreen } from '../../presentation/screens/Profile';
 
 const Stack =
   createNativeStackNavigator<import('./RootStackParams').MainStackParamList>();
@@ -14,9 +14,9 @@ const Stack =
 function StackNavigator(): JSX.Element {
   return (
     <Stack.Navigator>
-      <Stack.Screen name={MainRoutes.Home} component={HomePage} />
-      <Stack.Screen name={MainRoutes.Orders} component={OrdersPage} />
-      <Stack.Screen name={MainRoutes.Profile} component={ProfilePage} />
+      <Stack.Screen name={MainRoutes.Home} component={HomeScreen} />
+      <Stack.Screen name={MainRoutes.Orders} component={OrdersScreen} />
+      <Stack.Screen name={MainRoutes.Profile} component={ProfileScreen} />
     </Stack.Navigator>
   );
 }

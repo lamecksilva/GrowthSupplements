@@ -19,7 +19,7 @@ jest.mock('@react-navigation/native-stack', () => {
 });
 
 describe('App Navigator', () => {
-  it('should render HomePage first', async () => {
+  it('should render HomeScreen first', async () => {
     const { findByText } = render(<AppNavigator />);
 
     const homeText = await findByText(/Home/i);
@@ -27,7 +27,7 @@ describe('App Navigator', () => {
     expect(homeText).toBeTruthy();
   });
 
-  it('should navigate to Orders Page', async () => {
+  it('should navigate to Orders Screen', async () => {
     const { findByTestId, getByText } = render(<AppNavigator />);
 
     const button = await findByTestId('Orders');
@@ -36,7 +36,7 @@ describe('App Navigator', () => {
 
     // Not use two 'await's in an 'it' block
     // instead of 'findByText' use 'getByText'
-    const ordersText = getByText(/Orders Page/i);
+    const ordersText = getByText(/Orders Screen/i);
 
     expect(ordersText).toBeTruthy();
   });

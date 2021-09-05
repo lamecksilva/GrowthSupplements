@@ -2,10 +2,12 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export function ProfileScreen(): JSX.Element {
+export function SplashScreen(): JSX.Element {
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <Text>Profile Screen</Text>
+      <Text>Growth Supplements</Text>
+
+      <Text style={styles.developedByText}>Developed by Lameck Santos</Text>
     </SafeAreaView>
   );
 }
@@ -16,5 +18,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
+  },
+  developedByText: {
+    marginTop: 40,
   },
 });

@@ -1,19 +1,19 @@
 import 'react-native';
 import React from 'react';
-import { HomePage } from '..';
+import { HomeScreen } from '../';
 
 import { render } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
-describe('Home Page', () => {
+describe('Home Screen', () => {
   it('should render correctly', async () => {
     const { findByText } = render(
       <NavigationContainer>
-        <HomePage />
+        <HomeScreen />
       </NavigationContainer>,
     );
 
-    const screen = findByText(/Home Page/i);
+    const screen = findByText(/Home Screen/i);
 
     expect(screen).toBeTruthy();
   });
