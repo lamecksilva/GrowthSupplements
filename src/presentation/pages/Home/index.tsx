@@ -19,6 +19,7 @@ export function HomePage(): JSX.Element {
       <Button
         onPress={() => navigation.navigate(MainRoutes.Orders)}
         title={MainRoutes.Orders}
+        testID={MainRoutes.Orders}
       />
     </SafeAreaView>
   );
