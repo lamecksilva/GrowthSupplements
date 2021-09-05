@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import { HomePage } from '..';
+import { HomePage } from '../';
 
 import { render } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';

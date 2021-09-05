@@ -4,13 +4,13 @@ import { StyleSheet, Text, Button } from 'react-native';
 // import { Button } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { MainRoutes } from '../../../infra/navigation/RootStackParams';
+import {
+  MainRoutes,
+  MainNavigationProp,
+} from '@infra/navigation/RootStackParams';
 
 export function HomePage(): JSX.Element {
-  const navigation =
-    useNavigation<
-      import('../../../infra/navigation/RootStackParams').MainNavigationProp<MainRoutes.Home>
-    >();
+  const navigation = useNavigation<MainNavigationProp<MainRoutes.Home>>();
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
