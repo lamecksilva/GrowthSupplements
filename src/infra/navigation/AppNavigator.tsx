@@ -14,7 +14,7 @@ const Stack =
 
 function StackNavigator(): JSX.Element {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ header: () => null }}>
       <Stack.Screen name={MainRoutes.Splash} component={SplashScreen} />
       <Stack.Screen name={MainRoutes.Home} component={HomeScreen} />
       <Stack.Screen name={MainRoutes.Orders} component={OrdersScreen} />
