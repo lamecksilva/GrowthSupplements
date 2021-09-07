@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/core';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
@@ -20,13 +20,14 @@ export function SplashScreen(): JSX.Element {
   }, [navigation]);
 
   return (
-    // <TouchableOpacity onPress={() => navigation.navigate(MainRoutes.Home)}>
-    <SafeAreaView style={styles.safeAreaView}>
-      <Text>Growth Supplements</Text>
+    <TouchableWithoutFeedback
+      onPress={() => navigation.navigate(MainRoutes.Home)}>
+      <SafeAreaView style={styles.safeAreaView}>
+        <Text>Growth Supplements</Text>
 
-      <Text style={styles.developedByText}>Developed by Lameck Santos</Text>
-    </SafeAreaView>
-    // </TouchableOpacity>
+        <Text style={styles.developedByText}>Developed by Lameck Santos</Text>
+      </SafeAreaView>
+    </TouchableWithoutFeedback>
   );
 }
 
