@@ -28,20 +28,22 @@ describe('App Navigator', () => {
     expect(screen).toBeTruthy();
   });
 
-  // it('should navigate to HomePage after 3 seconds', async () => {
-  //   const { findByText, getByText } = render(<AppNavigator />);
+  it('should navigate to HomePage after 3 seconds', async () => {
+    const { findByText, getByText } = render(<AppNavigator />);
 
-  //   const screen = await findByText(/Growth Supplements/i);
-  //   expect(screen).toBeTruthy();
+    const screen = await findByText(/Growth Supplements/i);
+    expect(screen).toBeTruthy();
 
-  //   jest.useFakeTimers();
-  //   setTimeout(() => {
-  //     const newScreen = getByText(/Home Page/i);
+    jest.useFakeTimers();
+    setTimeout(() => {
+      const newScreen = getByText(/Growth Supplements/i);
 
-  //     expect(newScreen).toBeTruthy();
-  //   }, 3000);
-  //   jest.runAllTimers();
-  // });
+      console.log(newScreen);
+
+      expect(newScreen).toBeTruthy();
+    }, 4000);
+    jest.runAllTimers();
+  });
 
   // it('should navigate to Orders Screen', async () => {
   //   const { findByTestId, getByText } = render(<AppNavigator />);
