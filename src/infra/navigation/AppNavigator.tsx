@@ -13,6 +13,7 @@ const Stack =
   createNativeStackNavigator<import('./RootStackParams').MainStackParamList>();
 
 function StackNavigator(): JSX.Element {
+  // Check if user is logged in
   return (
     <Stack.Navigator screenOptions={{ header: () => null }}>
       <Stack.Screen name={MainRoutes.Splash} component={SplashScreen} />

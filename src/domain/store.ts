@@ -2,10 +2,12 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import globalReducer from './reducers/global';
+import userReducer from './reducers/user';
 
 export const store = configureStore({
   reducer: {
     global: globalReducer,
+    user: userReducer,
     // counter: counterReducer,
   },
 });
