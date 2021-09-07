@@ -35,14 +35,16 @@ describe('App Navigator', () => {
     expect(screen).toBeTruthy();
 
     jest.useFakeTimers();
-    setTimeout(() => {
-      const newScreen = getByText(/Growth Supplements/i);
+    jest.runAllTimers();
 
-      console.log(newScreen);
+    setTimeout(() => {
+      const newScreen = getByText(/Home Page/i);
 
       expect(newScreen).toBeTruthy();
-    }, 4000);
-    jest.runAllTimers();
+
+      // const button = getByTestId('Orders');
+      // expect(button).toBeTruthy();
+    }, 3000);
   });
 
   // it('should navigate to Orders Screen', async () => {
